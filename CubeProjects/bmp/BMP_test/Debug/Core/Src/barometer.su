@@ -1,0 +1,12 @@
+../Core/Src/barometer.c:85:13:ms5611_init	8	static
+../Core/Src/barometer.c:101:13:ms5611_write	16	static
+../Core/Src/barometer.c:108:17:ms5611_read16bits	32	static
+../Core/Src/barometer.c:125:17:ms5611_read24bits	32	static
+../Core/Src/barometer.c:136:17:ms5611_readRawTemp	16	static
+../Core/Src/barometer.c:149:17:ms5611_readRawPressure	16	static
+../Core/Src/barometer.c:162:6:Barometer_init	8	static
+../Core/Src/barometer.c:167:6:Barometer_setOSR	16	static
+../Core/Src/barometer.c:200:9:Barometer_getTemp	16	static
+../Core/Src/barometer.c:209:9:Barometer_getPressure	16	static
+../Core/Src/barometer.c:218:7:Barometer_getAltitude	16	static
+../Core/Src/barometer.c:227:6:Barometer_calculate	368	static
