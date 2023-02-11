@@ -1,4 +1,7 @@
 #MicroXplorer Configuration settings - do not modify
+CAD.formats=
+CAD.pinconfig=
+CAD.provider=
 File.Version=6
 GPIO.groupedBy=
 KeepUserPlacement=false
@@ -110,8 +113,8 @@ ProjectManager.MainLocation=Core/Src
 ProjectManager.NoMain=false
 ProjectManager.PreviousToolchain=STM32CubeIDE
 ProjectManager.ProjectBuild=false
-ProjectManager.ProjectFileName=INS.ioc
-ProjectManager.ProjectName=INS
+ProjectManager.ProjectFileName=INS_test.ioc
+ProjectManager.ProjectName=INS_test
 ProjectManager.RegisterCallBack=
 ProjectManager.StackSize=0x400
 ProjectManager.TargetToolchain=STM32CubeIDE
@@ -169,3 +172,4 @@ VP_SYS_VS_Systick.Signal=SYS_VS_Systick
 VP_USB_DEVICE_VS_USB_DEVICE_CDC_FS.Mode=CDC_FS
 VP_USB_DEVICE_VS_USB_DEVICE_CDC_FS.Signal=USB_DEVICE_VS_USB_DEVICE_CDC_FS
 board=custom
+isbadioc=false

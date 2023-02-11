@@ -38,34 +38,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := INS
+BUILD_ARTIFACT_NAME := INS_test
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-INS.elf \
+INS_test.elf \
 
 MAP_FILES += \
-INS.map \
+INS_test.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-INS.list \
+INS_test.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: INS.elf secondary-outputs
+main-build: INS_test.elf secondary-outputs
 
 # Tool invocations
-INS.elf INS.map: $(OBJS) $(USER_OBJS) C:\Users\K-240\Desktop\stm\Новая\ папка\INS_test\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "INS.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\K-240\Desktop\stm\Новая папка\INS_test\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="INS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+INS_test.elf INS_test.map: $(OBJS) $(USER_OBJS) C:\Users\K-240\STM32CubeIDE\workspace_1.10.1\INS_test\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "INS_test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\K-240\STM32CubeIDE\workspace_1.10.1\INS_test\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="INS_test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -74,14 +74,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-INS.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "INS.list"
+INS_test.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "INS_test.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) INS.elf INS.list INS.map default.size.stdout
+	-$(RM) INS_test.elf INS_test.list INS_test.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
