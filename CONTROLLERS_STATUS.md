@@ -1,21 +1,21 @@
 ## Penguin 1
-> usb: -  
+> usb: + (USB_A)  
 acc: +  
-gyro: +- (одно значение = 0)  
+gyro: -  
 mag: +  
-bmp: - 
-WHOAMI:   
-status: Тёма чинит
+bmp: -   (temp = 2000, pr = 0)   
+WHOAMI:   ?  
+status:  проверить INS_test
 
 
 ## Penguin 2
-> usb: +
-acc: +  
-gyro: - (все значения = 0)  
-mag: +  
-bmp: - (temp = 2000, pr = 0)  
-WHOAMI: 120  
-status:  
+> usb: -  
+acc: ?    
+gyro: ?   
+mag: ?    
+bmp: ?  
+WHOAMI: ?   
+status:  dead
 
 
 ## Penguin 3
@@ -23,8 +23,11 @@ status:
 acc: - (все значения = -1)  
 gyro: - (все значения = 0)   
 mag: - (все значения = -1)  
-bmp: +  
+bmp: ?  (temp +, pr -)  
 WHOAMI: 255  
 status:  
  
+WARNING: whoAmI возвращает непонятные значения при изменении строки 271 файла MPU9250.c
 
+Проверял: OArt13  
+Дата: 14.02.23
