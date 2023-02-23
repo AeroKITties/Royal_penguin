@@ -1,0 +1,13 @@
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.100.202210260954\tools\arm-none-eabi\include\c++\10.3.1\cmath:388:3:constexpr float std::pow(float, float)	16	static
+../Core/Src/barometer.cpp:85:13:void ms5611_init()	8	static
+../Core/Src/barometer.cpp:101:13:void ms5611_write(uint8_t)	16	static
+../Core/Src/barometer.cpp:108:17:uint16_t ms5611_read16bits(uint8_t)	32	static
+../Core/Src/barometer.cpp:125:17:uint32_t ms5611_read24bits(uint8_t)	32	static
+../Core/Src/barometer.cpp:136:17:uint32_t ms5611_readRawTemp()	16	static
+../Core/Src/barometer.cpp:149:17:uint32_t ms5611_readRawPressure()	16	static
+../Core/Src/barometer.cpp:162:6:void Barometer_init()	8	static
+../Core/Src/barometer.cpp:167:6:void Barometer_setOSR(OSR)	16	static
+../Core/Src/barometer.cpp:200:9:int32_t Barometer_getTemp(bool)	16	static
+../Core/Src/barometer.cpp:209:9:int32_t Barometer_getPressure(bool)	16	static
+../Core/Src/barometer.cpp:218:7:float Barometer_getAltitude(bool)	16	static
+../Core/Src/barometer.cpp:227:6:void Barometer_calculate()	368	static
