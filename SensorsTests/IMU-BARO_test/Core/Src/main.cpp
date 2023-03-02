@@ -17,12 +17,12 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include <Baro_ms5611.h>
 #include "main.h"
 #include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "BARO_ms5611.h"
 #include "IMU_mpu9250.h"
 #include "stdio.h"
 #include <iostream>
@@ -103,10 +103,10 @@ int main(void)
   MX_USART1_UART_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-  struct InertialSensor IMU {};
-  struct Barometr BAROMETR {};
+  struct IMU IMU_ {};
+  struct Baro BAROMETR {};
 
-  IMU.init(&hspi1);
+  IMU_.init(&hspi1);
   BAROMETR.init();
 
   char buf[256];
@@ -122,9 +122,9 @@ int main(void)
 			"gyro: %d, %d, %d\n"
 			"mag: %d, %d, %d\n",
 			BAROMETR.get_temperature(), BAROMETR.get_pressure(), BAROMETR.get_altitude(),
-			IMU.get_accel_data()[0], IMU.get_accel_data()[1], IMU.get_accel_data()[2],
-			IMU.get_gyro_data()[0], IMU.get_gyro_data()[1], IMU.get_gyro_data()[2],
-			IMU.get_mag_data()[0], IMU.get_mag_data()[1], IMU.get_mag_data()[2]);
+			IMU_.get_accel_data()[0], IMU_.get_accel_data()[1], IMU_.get_accel_data()[2],
+			IMU_.get_gyro_data()[0], IMU_.get_gyro_data()[1], IMU_.get_gyro_data()[2],
+			IMU_.get_mag_data()[0], IMU_.get_mag_data()[1], IMU_.get_mag_data()[2]);
 	CDC_Transmit_FS((uint8_t *)buf,strlen(buf));
 	HAL_Delay(1000);
     /* USER CODE BEGIN 3 */

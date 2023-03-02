@@ -1,6 +1,6 @@
-Core/Src/BARO_ms5611.o: ../Core/Src/BARO_ms5611.cpp \
- ../Core/Inc/BARO_ms5611.h ../Core/Inc/BarometrInterface.h \
- ../Core/Inc/barometer.h ../USB_DEVICE/App/usb_device.h \
+Core/Src/Baro_ms5611.o: ../Core/Src/Baro_ms5611.cpp \
+ ../Core/Inc/Baro_ms5611.h ../Core/Inc/BaroBase.h ../Core/Inc/barometer.h \
+ ../USB_DEVICE/App/usb_device.h \
  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h \
  ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f405xx.h \
  ../Drivers/CMSIS/Include/core_cm4.h \
@@ -35,8 +35,8 @@ Core/Src/BARO_ms5611.o: ../Core/Src/BARO_ms5611.cpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
  ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  ../USB_DEVICE/Target/usbd_conf.h ../Core/Inc/main.h
-../Core/Inc/BARO_ms5611.h:
-../Core/Inc/BarometrInterface.h:
+../Core/Inc/Baro_ms5611.h:
+../Core/Inc/BaroBase.h:
 ../Core/Inc/barometer.h:
 ../USB_DEVICE/App/usb_device.h:
 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:

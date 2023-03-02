@@ -1,41 +1,41 @@
 #include "IMU_mpu9250.h"
 
-InertialSensor::InertialSensor() {
+IMU::IMU() {
     MPU9250_DISABLE;
 }
 
-void InertialSensor::data_update() {
+void IMU::data_update() {
     MPU9250_GetData(AccData, GyroData, MagData);
 }
 
-void InertialSensor::init(SPI_HandleTypeDef* hspi){
+void IMU::init(SPI_HandleTypeDef* hspi) {
     //ref_hspi1 <- hspi1
     MPU9250_Init(hspi);
 }
 
-void InertialSensor::calibrate_accel(){
+void IMU::calibrate_accel() {
     //FIXME
 }
 
-void InertialSensor::calibrate_hyro(){
+void IMU::calibrate_hyro() {
     //FIXME
 }
 
-void InertialSensor::calibrate_mag(){
+void IMU::calibrate_mag() {
     //FIXME
 }
 
-Vector3 InertialSensor::get_accel_data(){
+Vector3i IMU::get_accel_data() {
     data_update();
-    return Vector3{AccData[0], AccData[1], AccData[2]};
+    return Vector3i{AccData[0], AccData[1], AccData[2]};
 }
 
-Vector3 InertialSensor::get_gyro_data(){
+Vector3i IMU::get_gyro_data() {
     data_update();
-    return Vector3{GyroData[0], GyroData[1], GyroData[2]};
+    return Vector3i{GyroData[0], GyroData[1], GyroData[2]};
 }
 
-Vector3 InertialSensor::get_mag_data(){
+Vector3i IMU::get_mag_data() {
     data_update();
-    return Vector3{MagData[0], MagData[1], MagData[2]};
+    return Vector3i{MagData[0], MagData[1], MagData[2]};
 }

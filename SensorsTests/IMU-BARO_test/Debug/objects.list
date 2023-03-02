@@ -1,4 +1,4 @@
-"./Core/Src/BARO_ms5611.o"
+"./Core/Src/Baro_ms5611.o"
 "./Core/Src/IMU_mpu9250.o"
 "./Core/Src/MPU9250.o"
 "./Core/Src/barometer.o"

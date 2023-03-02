@@ -1,19 +1,25 @@
-#include <vector>
-
+template <typename T>
 class Vector3{
 private:
-    std::vector<int> vec;
+    T data[3];
 public:
-    Vector3(){ 
-	vec = {0, 0, 0}; 
+    Vector3() {
+    	T data[3] {T{}, T{}, T{}};
     }
     
-    Vector3(int f, int s, int t){
-        vec = std::vector<int>{f, s, t};
+    Vector3(T f, T s, T t) {
+    	T data[3] {f, s, t};
     }
     
-    int& operator[] (int i) {
-        return vec[i];
+    T& operator[] (T i) {
+        return data[i];
     }
+
+    const T& operator[] (T i) const {
+            return data[i];
+        }
 };
+
+using Vector3i = Vector3<int>;
+using Vector3f = Vector3<float>;
 
