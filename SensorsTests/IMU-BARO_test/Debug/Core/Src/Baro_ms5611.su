@@ -1,0 +1,12 @@
+../Core/Inc/BaroBase.h:5:18:virtual void BaroBase::init()	16	static
+../Core/Inc/BaroBase.h:7:18:virtual void BaroBase::calibrate()	16	static
+../Core/Inc/BaroBase.h:9:17:virtual int BaroBase::get_pressure()	16	static
+../Core/Inc/BaroBase.h:11:17:virtual int BaroBase::get_altitude()	16	static
+../Core/Inc/BaroBase.h:13:17:virtual int BaroBase::get_temperature()	16	static
+../Core/Inc/BaroBase.h:4:7:constexpr BaroBase::BaroBase()	16	static
+../Core/Src/Baro_ms5611.cpp:3:1:Baro::Baro()	16	static
+../Core/Src/Baro_ms5611.cpp:7:6:virtual void Baro::init()	16	static
+../Core/Src/Baro_ms5611.cpp:11:6:virtual void Baro::calibrate()	16	static
+../Core/Src/Baro_ms5611.cpp:15:5:virtual int Baro::get_pressure()	16	static
+../Core/Src/Baro_ms5611.cpp:19:5:virtual int Baro::get_altitude()	16	static
+../Core/Src/Baro_ms5611.cpp:23:5:virtual int Baro::get_temperature()	16	static
